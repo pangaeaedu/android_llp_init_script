@@ -17,7 +17,10 @@ tasks = [
     'update_gradle_plugin_version',
     'update_java_compatibility',
     'update_target_sdk_version',
-    'copy_gradle_templates'
+    'copy_gradle_templates',
+    'update_mod_app_id',
+    'update_fragment_version',
+    'remove_permissions'
 ]
 
 
