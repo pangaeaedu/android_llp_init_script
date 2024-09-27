@@ -66,7 +66,7 @@ def run(target_path):
         # 如果修复了 shebang 行，创建一个 Git commit
         if shebang_fixed:
             try:
-                subprocess.run(["git", "add", "workSpaceCanRun.sh"],
+                subprocess.run(["git", "add", "."],
                                check=True, cwd=target_path)
                 subprocess.run(
                     ["git", "commit", "-m", "Fix shebang line in workSpaceCanRun.sh"], check=True, cwd=target_path)
