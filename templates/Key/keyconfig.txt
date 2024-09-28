@@ -1,0 +1,19 @@
+    signingConfigs {
+        releaseConfig {
+            storeFile rootProject.file('sign_key.jks')
+            storePassword "aomaisign2024"
+            keyAlias "aomai"
+            keyPassword "aomaisign2024"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+        debugConfig {
+            storeFile rootProject.file('upload_key.jks')
+            storePassword "aomaiupload2024"
+            keyAlias "aomai"
+            keyPassword "aomaiupload2024"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
