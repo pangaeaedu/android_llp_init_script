@@ -1,0 +1,29 @@
+include ':app'
+// 可配置工程
+// 配置后如果存在该目录，工程将包含该目录模块，否则不包含
+// 依赖配置采用 try catch 方式依赖此些工程
+def map = [:]
+map["llp-x-userinfo-android/module"] = ":userinfo_module"
+map["llp-x-user-android/ks-doc"] = ":ks-doc"
+map["llp-x-user-android/module"] = ":user_module"
+map["llp-x-cloud-assemble-android/module"] = ":cloud_assemble_module"
+map["llp-x-cloud-assemble-android/x-im-ext-common"] = ":x-im-ext-common"
+map["llp-xst-course-android/sdk"] = ":sdk"
+map["llp-xst-course-android/presenter"] = ":presenter"
+map["llp-xst-course-android/tcourse"] = ":tcourse"
+map["llp-xst-course-android/teach-course"] = ":teach-course"
+map["llp-xst-course-android/ocourse"] = ":ocourse"
+map["llp-xst-course-android/coursehour"] = ":coursehour"
+map["llp-xst-course-android/experiment"] = ":experiment"
+map["llp-xst-course-android/standard"] = ":standard"
+map["llp-xst-course-android/data"] = ":data"
+map["llp-xst-course-android/course-abs"] = ":course-abs"
+map["llp-xst-course-android/module"] = ":course_module"
+//map["pbl-android/module"] = ":pbl_module"
+map.each { dirPath, projectName ->
+    File file = new File('../' + dirPath)
+    if (file.isDirectory() && file.exists() && new File(file, "build.gradle").exists()) {
+        include projectName
+        project(projectName).projectDir = file
+    }
+}
