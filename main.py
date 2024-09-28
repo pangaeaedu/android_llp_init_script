@@ -21,7 +21,8 @@ tasks = [
     'update_mod_app_id',
     'update_fragment_version',
     'remove_permissions',
-    'add_signing_config'
+    'add_signing_config',
+    'update_app_name',
 ]
 
 

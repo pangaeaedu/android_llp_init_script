@@ -25,15 +25,16 @@ def run(target_path):
         content = file.read()
 
     # 删除现有的 signingConfigs { } 块
-    pattern = re.compile(r'signingConfigs\s*\{[^}]*\}', re.DOTALL)
+    pattern = re.compile(r'signingConfigs\s*\{\s*\}', re.DOTALL)
     if pattern.search(content):
         content = pattern.sub('', content)
-        logging.info("已删除现有的 signingConfigs 块")
+        logging.info("已删除现有的空 signingConfigs 块")
         modified = True
     else:
         modified = False
 
     if signing_config not in content:
+        logging.info("signingConfigs 块不在build.gradle文件中")
         content = re.sub(r'(defaultConfig \{)', f'{
                          signing_config}\n\n\\1', content)
         modified = True
