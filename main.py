@@ -20,7 +20,8 @@ tasks = [
     'copy_gradle_templates',
     'update_mod_app_id',
     'update_fragment_version',
-    'remove_permissions'
+    'remove_permissions',
+    'add_signing_config'
 ]
 
 
