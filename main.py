@@ -23,6 +23,7 @@ tasks = [
     'remove_permissions',
     'add_signing_config',
     'update_app_name',
+    'update_service_urls',
 ]
 
 
