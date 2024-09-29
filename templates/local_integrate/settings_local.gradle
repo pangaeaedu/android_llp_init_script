@@ -19,6 +19,8 @@ map["llp-xst-course-android/standard"] = ":standard"
 map["llp-xst-course-android/data"] = ":data"
 map["llp-xst-course-android/course-abs"] = ":course-abs"
 map["llp-xst-course-android/module"] = ":course_module"
+map["thai-nduccomponent/module"] = ":thai-nduccomponent"
+map["llp-ui/module"] = ":llp-ui"
 //map["pbl-android/module"] = ":pbl_module"
 map.each { dirPath, projectName ->
     File file = new File('../' + dirPath)

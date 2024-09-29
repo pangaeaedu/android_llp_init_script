@@ -10,3 +10,8 @@
     implementation project(":experiment")
     implementation project(":standard")
     implementation project(":course_module")
+    implementation project(":thai-nduccomponent")
+    implementation project(":llp-ui")
+    configurations {
+        all*.exclude group: 'com.nd.sdp.uc', module: 'nd_uc_component'
+    }

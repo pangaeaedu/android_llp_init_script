@@ -3,7 +3,7 @@ import os
 # 配置参数
 CONFIG = {
     # 替换为实际的目标项目路径
-    "target_project_path": os.path.expanduser("/Users/nd/Code/LLP-x-cloud/llp_9_27"),
+    "target_project_path": os.path.expanduser("/Users/nd/Code/LLP-x-cloud/llp_9_29"),
     # 在这里可以添加更多的配置参数
 
     # 环境，可以是 staging 或 pre
@@ -25,5 +25,6 @@ CONFIG = {
         "com.nd.sdp.android:llp-x-cloud-assemble-android:",
         "com.nd.sdp.android:xst-coursehour:",
         "com.nd.sdp.android:llp-xst-course:",
+        "com.nd.sdp.uc:nd_uc_component:"
     ]
 }
